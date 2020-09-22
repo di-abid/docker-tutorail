@@ -7,7 +7,7 @@ script:
   - docker images diabid/node
 
 before_deploy:
-  - docker login -u diabid -p Docker@2021
+  - docker login -u diabid -p Docker@2020
 
 deploy:
   provider: script
