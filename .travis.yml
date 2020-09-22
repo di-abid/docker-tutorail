@@ -5,3 +5,12 @@ services:
 script:
   - docker build -t diabid/node .
   - docker images diabid/node
+
+before_deploy:
+  - docker login -u diabid -p Docker@2021
+
+deploy:
+  provider: script
+  script: docker push abid/node
+  on:
+    branch: master
